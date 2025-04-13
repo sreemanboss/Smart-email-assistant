@@ -1,0 +1,9 @@
+smart_email_assistant/
+├── app.py                  # Flask main app
+├── dualsummary.py           # Dual summary logic
+├── actionsuggestions.py     # Suggest action labels
+├── reply_generator.py      # Create smart replies
+├── email_sender.py         # Send via Mailtrap
+├── templates/
+│   └── index.html          # UI Page
+└── static/                 # (Optional) CSS/JS

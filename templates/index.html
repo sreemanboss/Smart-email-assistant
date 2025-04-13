@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Smart Email Assistant</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+    <div class="container">
+        <h1>Smart Email Assistant</h1>
+        <form action="/process_email" method="post">
+            <textarea name="email_content" rows="10" placeholder="Paste your email here..."></textarea><br>
+            <input type="submit" value="Process Email">
+        </form>
+
+        {% if summary %}
+        <h2>Summary</h2>
+        <p>{{ summary }}</p>
+        {% endif %}
+
+        {% if action %}
+        <h2>Suggested Action</h2>
+        <p>{{ action }}</p>
+        {% endif %}
+
+        {% if reply %}
+        <h2>Suggested Reply</h2>
+        <p>{{ reply }}</p>
+        {% endif %}
+    </div>
+</body>
+</html>
